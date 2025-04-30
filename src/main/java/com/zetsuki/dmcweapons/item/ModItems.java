@@ -1,7 +1,10 @@
 package com.zetsuki.dmcweapons.item;
 
 import com.zetsuki.dmcweapons.DMC_Weapons;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -15,7 +18,10 @@ public class ModItems {
             ITEMS.register("rebellion",
                     () -> new Item(new Item.Properties()
                             .setId(ITEMS.key("rebellion"))
-                            .stacksTo(1)
+                            .sword(new ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+                                    2031, 9.0F, 5.0F, 15,
+                                    ItemTags.NETHERITE_TOOL_MATERIALS),3.0F, -2.4F)
+                            .fireResistant()
                     )
             );
 
