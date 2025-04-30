@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "s": [
+      "minecraft:stick"
+    ],
+    "I": [
+      "minecraft:netherite_ingot"
+    ],
+    "S": [
+      "minecraft:nether_star"
+    ]
+  },
+  "pattern": [
+    " I ",
+    "SIS",
+    " s "
+  ],
+  "result": {
+    "id": "dmcweapons:rebellion",
+    "count": 1
+  }
+}
