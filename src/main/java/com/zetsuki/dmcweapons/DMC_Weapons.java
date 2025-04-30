@@ -1,6 +1,7 @@
-package com.zetsuki.dmc_weapons;
+package com.zetsuki.dmcweapons;
 
 import com.mojang.logging.LogUtils;
+import com.zetsuki.dmcweapons.item.ModItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -20,7 +21,7 @@ import org.slf4j.Logger;
 @Mod(DMC_Weapons.MODID)
 public class DMC_Weapons {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "dmc_weapons";
+    public static final String MODID = "dmcweapons";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -32,6 +33,8 @@ public class DMC_Weapons {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -47,6 +50,7 @@ public class DMC_Weapons {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.SEARCH) {
+            event.accept(ModItems.REBELLION);
         }
     }
 

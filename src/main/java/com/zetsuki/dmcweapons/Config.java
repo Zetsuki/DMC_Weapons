@@ -1,4 +1,4 @@
-package com.zetsuki.dmc_weapons;
+package com.zetsuki.dmcweapons;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
